@@ -1,1 +1,9 @@
+apiversion
+bridgeid
+datastoreversion
+factorynew
 Hue
+modelid
+replacesbridgeid
+starterkitid
+swversion
