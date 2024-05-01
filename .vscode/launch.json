@@ -1,0 +1,45 @@
+{
+    // Utilisez IntelliSense pour en savoir plus sur les attributs possibles.
+    // Pointez pour afficher la description des attributs existants.
+    // Pour plus d'informations, visitez : https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "example hue_dart",
+            "request": "launch",
+            "type": "dart",
+            "program": "example/lib/main.dart"
+        },
+        {
+            "name": "example hue_dart profile",
+            "request": "launch",
+            "type": "dart",
+            "program": "example/lib/main.dart",
+            "flutterMode": "profile"
+        },
+        {
+            "name": "example hue_dart release",
+            "request": "launch",
+            "type": "dart",
+            "program": "example/lib/main.dart",
+            "flutterMode": "release"
+        },
+        {
+            "name": "hue_dart",
+            "request": "launch",
+            "type": "dart"
+        },
+        {
+            "name": "hue_dart (profile mode)",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "profile"
+        },
+        {
+            "name": "hue_dart (release mode)",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "release"
+        }
+    ]
+}

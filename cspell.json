@@ -1,0 +1,21 @@
+{
+    "files": [
+        "example/**/*.dart",
+        "lib/**/*.dart"
+    ],
+    "dictionaries": [
+        "custom-words",
+        "dart"
+    ],
+    "dictionaryDefinitions": [
+        {
+            "name": "custom-words",
+            "path": ".custom-words.txt",
+            "addWords": true
+        }
+    ],
+    "enableFiletypes": [
+        "dart"
+    ],
+    "language": "en"
+}
