@@ -55,6 +55,14 @@ class _MyHomePageState extends State<MyHomePage> {
         itemBuilder: (context, index) {
           return ListTile(
             title: Text(_bridgeAddress[index].name),
+            onTap: () {
+              final client = HueClient("https://192.168.1.17/");
+              client.retrieveApiKey("DartHue#iphone de Elliot").then((value) {
+                print(value);
+              }).catchError((error) {
+                print(error);
+              });
+            },
           );
         },
         itemCount: _bridgeAddress.length,

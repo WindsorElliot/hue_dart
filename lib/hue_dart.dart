@@ -1,7 +1,8 @@
 library hue_dart;
 
 export 'src/discover/hue_discover.dart';
-export 'src/model/discovered_bridge.dart';
+export 'src/model/model.dart';
+export 'src/client/hue_client.dart';
 
 /// A Calculator.
 class Calculator {

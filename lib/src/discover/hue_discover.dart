@@ -2,7 +2,7 @@ import 'dart:io';
 
 import 'package:dio/dio.dart';
 import 'package:dio/io.dart';
-import 'package:flutter/foundation.dart';
+import 'package:logger/logger.dart';
 import 'package:multicast_dns/multicast_dns.dart';
 
 import '../model/discovered_bridge.dart';
@@ -27,9 +27,10 @@ class HueDiscover {
         await for (final IPAddressResourceRecord ip
             in client.lookup<IPAddressResourceRecord>(
                 ResourceRecordQuery.addressIPv4(srv.target))) {
-          debugPrint("Found Hue bridge at ${ip.address.address}");
           final bridge = await _askBridgeFounded(ip.address.address);
           if (bridge != null) {
+            Logger().i(
+                "Found Hue bridge at ${ip.address.address}: ${bridge.toJson}");
             onBridgeAddressFound?.call(bridge);
           }
         }
@@ -57,7 +58,7 @@ class HueDiscover {
       if (response.statusCode != 200) return null;
       return DiscoveredBridge.fromJson(response.data);
     } catch (e) {
-      debugPrint("Error asking bridge at $address: $e");
+      Logger().e("Error asking bridge at $address: $e", error: e);
       return null;
     }
   }

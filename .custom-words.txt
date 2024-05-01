@@ -1,7 +1,10 @@
 apiversion
 bridgeid
+clientkey
 datastoreversion
+devicetype
 factorynew
+generateclientkey
 Hue
 modelid
 replacesbridgeid
