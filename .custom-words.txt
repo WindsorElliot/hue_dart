@@ -1,6 +1,7 @@
 apiversion
 bridgeid
 clientkey
+cupertino
 datastoreversion
 devicetype
 factorynew

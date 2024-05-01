@@ -1,5 +1,5 @@
 import 'package:hue_dart/src/model/api_key.dart';
-import 'package:hue_dart/src/model/hue_error.dart';
+import 'package:hue_dart/src/model/error/hue_error.dart';
 import 'package:json_annotation/json_annotation.dart';
 
 part 'response_body_api_key.g.dart';

@@ -36,7 +36,7 @@ class HueClient {
       } else {
         throw HueExceptionUnknown();
       }
-    } on HueException {
+    } on HueException catch (_) {
       rethrow;
     } on DioException catch (_) {
       throw HueException.fromCode(-1);

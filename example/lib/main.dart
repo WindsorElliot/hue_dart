@@ -1,3 +1,4 @@
+import 'package:example/extension/context_extension.dart';
 import 'package:flutter/material.dart';
 import 'package:hue_dart/hue_dart.dart';
 
@@ -53,14 +54,17 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
       body: ListView.builder(
         itemBuilder: (context, index) {
+          final bridge = _bridgeAddress[index];
           return ListTile(
-            title: Text(_bridgeAddress[index].name),
+            title: Text(bridge.name),
+            subtitle: Text("${bridge.addressIP} || ${bridge.mac}"),
+            trailing: Text(bridge.modelId),
             onTap: () {
-              final client = HueClient("https://192.168.1.17/");
-              client.retrieveApiKey("DartHue#iphone de Elliot").then((value) {
+              final client = HueClient("https://${bridge.addressIP}/");
+              client.createApiKey("DartHue#iphone de Elliot").then((value) {
                 print(value);
               }).catchError((error) {
-                print(error);
+                context.displayError(error);
               });
             },
           );

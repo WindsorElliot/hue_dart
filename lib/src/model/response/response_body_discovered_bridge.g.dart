@@ -1,13 +1,14 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'discovered_bridge.dart';
+part of 'response_body_discovered_bridge.dart';
 
 // **************************************************************************
 // JsonSerializableGenerator
 // **************************************************************************
 
-DiscoveredBridge _$DiscoveredBridgeFromJson(Map<String, dynamic> json) =>
-    DiscoveredBridge(
+ResponseBodyDiscoveredBridge _$ResponseBodyDiscoveredBridgeFromJson(
+        Map<String, dynamic> json) =>
+    ResponseBodyDiscoveredBridge(
       name: json['name'] as String,
       datastoreVersion: json['datastoreversion'] as String,
       swVersion: json['swversion'] as String,
@@ -20,7 +21,8 @@ DiscoveredBridge _$DiscoveredBridgeFromJson(Map<String, dynamic> json) =>
       starterKitId: json['starterkitid'] as String,
     );
 
-Map<String, dynamic> _$DiscoveredBridgeToJson(DiscoveredBridge instance) =>
+Map<String, dynamic> _$ResponseBodyDiscoveredBridgeToJson(
+        ResponseBodyDiscoveredBridge instance) =>
     <String, dynamic>{
       'name': instance.name,
       'datastoreversion': instance.datastoreVersion,
