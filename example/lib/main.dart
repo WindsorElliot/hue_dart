@@ -1,4 +1,5 @@
 import 'package:example/extension/context_extension.dart';
+import 'package:example/pages/devices_page.dart';
 import 'package:flutter/material.dart';
 import 'package:hue_dart/hue_dart.dart';
 
@@ -61,11 +62,28 @@ class _MyHomePageState extends State<MyHomePage> {
             trailing: Text(bridge.modelId),
             onTap: () {
               final client = HueClient("https://${bridge.addressIP}/");
-              client.createApiKey("DartHue#iphone de Elliot").then((value) {
-                print(value);
-              }).catchError((error) {
-                context.displayError(error);
-              });
+              Navigator.of(context).push(
+                MaterialPageRoute(
+                  builder: (context) => DevicesPage(
+                    bridgeName: bridge.name,
+                    username: "XBB4owOkBO6ETFYepq5b05ZE8SB93aq6HukrBXkQ",
+                    client: client,
+                  ),
+                ),
+              );
+              // client.createApiKey("DartHue#iphone de Elliot").then((value) {
+              //   Navigator.of(context).push(
+              //     MaterialPageRoute(
+              //       builder: (context) => DevicesPage(
+              //         bridgeName: bridge.name,
+              //         username: value.username,
+              //         client: client,
+              //       ),
+              //     ),
+              //   );
+              // }).catchError((error) {
+              //   context.displayError(error);
+              // });
             },
           );
         },

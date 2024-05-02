@@ -24,7 +24,7 @@ BodyApiKey _$BodyApiKeyFromJson(Map<String, dynamic> json) => BodyApiKey(
           : ApiKey.fromJson(json['success'] as Map<String, dynamic>),
       error: json['error'] == null
           ? null
-          : HueError.fromJson(json['error'] as Map<String, dynamic>),
+          : HueBaseError.fromJson(json['error'] as Map<String, dynamic>),
     );
 
 Map<String, dynamic> _$BodyApiKeyToJson(BodyApiKey instance) =>

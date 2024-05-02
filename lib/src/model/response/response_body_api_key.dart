@@ -1,5 +1,5 @@
 import 'package:hue_dart/src/model/api_key.dart';
-import 'package:hue_dart/src/model/error/hue_error.dart';
+import 'package:hue_dart/src/model/error/hue_base_error.dart';
 import 'package:json_annotation/json_annotation.dart';
 
 part 'response_body_api_key.g.dart';
@@ -21,7 +21,7 @@ class ResponseBodyApiKey {
 @JsonSerializable()
 class BodyApiKey {
   final ApiKey? success;
-  final HueError? error;
+  final HueBaseError? error;
 
   BodyApiKey({
     this.success,

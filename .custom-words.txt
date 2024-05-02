@@ -9,5 +9,6 @@ generateclientkey
 Hue
 modelid
 replacesbridgeid
+rtype
 starterkitid
 swversion
