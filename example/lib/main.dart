@@ -1,5 +1,6 @@
 import 'package:example/pages/devices_page.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:hue_dart/hue_dart.dart';
 
 void main() {
@@ -59,8 +60,11 @@ class _MyHomePageState extends State<MyHomePage> {
             title: Text(bridge.name),
             subtitle: Text("${bridge.addressIP} || ${bridge.mac}"),
             trailing: Text(bridge.modelId),
-            onTap: () {
-              final client = HueClient("https://${bridge.addressIP}/");
+            onTap: () async {
+              final client = HueClient("https://${bridge.addressIP}/",
+                  certificate: await rootBundle.load(
+                      'packages/hue_dart/assets/certificate/huebridge_cacert.pem'));
+              if (!context.mounted) return;
               Navigator.of(context).push(
                 MaterialPageRoute(
                   builder: (context) => DevicesPage(

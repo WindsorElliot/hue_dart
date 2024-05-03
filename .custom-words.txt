@@ -8,6 +8,8 @@ devicetype
 factorynew
 generateclientkey
 Hue
+huebridge
+Mirek
 modelid
 replacesbridgeid
 rtype
