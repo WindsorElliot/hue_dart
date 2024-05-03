@@ -1,4 +1,5 @@
 apiversion
+ARGB
 bridgeid
 clientkey
 cupertino

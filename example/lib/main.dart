@@ -1,4 +1,3 @@
-import 'package:example/extension/context_extension.dart';
 import 'package:example/pages/devices_page.dart';
 import 'package:flutter/material.dart';
 import 'package:hue_dart/hue_dart.dart';
